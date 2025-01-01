@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+       Electricity Bill
+        </title>
+    </head>
+    <body>
+        CUSTOMER ID:<input type="text" name="idd" id="cus"/><br/><br/>
+        NAME:<input type="text" name="name" id="na"/><br/><br/>
+        UNITS CONSUMED<input type="number" name="units" id="un"/><br/><br/>
+        <button onclick="bill()">Calculate</button>
+        <h4 id="res1"></h4>
+        <h4 id="res2"></h4>
+        <h4 id="res3"></h4>
+        <h4 id="res4"></h4>
+
+    </body>
+    <script>
+        function bill(){
+            var idd=document.getElementById('cus').value;
+
+            var name=document.getElementById('na').value;
+            
+            var units=parseInt(document.getElementById('un').value);
+              
+            document.getElementById('res1').innerHTML=idd;
+            
+            document.getElementById('res2').innerHTML=name;
+            
+            document.getElementById('res3').innerHTML=units;
+            var bill;
+            
+            if (units<=199)
+            {
+                bill=units*1.2
+            }
+            else if(units>=200 && units<400)
+            {
+                bill=units*1.5
+            }
+            else if(units>=400  && units<600)
+            {
+                bill=units*1.8
+            }
+            else{
+                bill=units*2
+            }
+
+           
+            if (bill>400){
+                bill=bill+bill*(0.15)
+            }
+            document.getElementById('res4').innerHTML="Rs. "+bill
+        }
+    </script>
+</html>

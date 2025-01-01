@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="email"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validateRegistration()">
+        <label for="inputName">Full Name:</label><br>
+        <input type="text" id="inputName" required><br>
+
+        <label for="inputPassword">Create Password:</label><br>
+        <input type="password" id="inputPassword" required><br>
+
+        <label for="confirmPassword">Confirm Password:</label><br>
+        <input type="password" id="confirmPassword" required><br>
+
+        <label for="inputPhoneNumber">Phone Number:</label><br>
+        <input type="tel" id="inputPhoneNumber" pattern="[0-9]{10,}" required><br>
+
+        <label for="inputEmail">Email Address:</label><br>
+        <input type="email" id="inputEmail" required><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        function validateRegistration() {
+            var fullName = document.getElementById("inputName").value;
+            var password = document.getElementById("inputPassword").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var phoneNumber = document.getElementById("inputPhoneNumber").value;
+            var emailAddress = document.getElementById("inputEmail").value;
+
+            if (fullName === "" || password === ""  || confirmPassword === "" || phoneNumber === "" || emailAddress === "") {
+                alert("All fields are compulsory");
+                return false;
+            }
+
+            if (fullName.trim() === "") {
+                alert("Full name can't be empty");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            var phoneNumberRegex = /^\d{10}$/;
+            if (!phoneNumberRegex.test(phoneNumber)) {
+                alert("Phone number must be a 10-digit number");
+                return false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            if (!emailRegex.test(emailAddress)) {
+                alert("Invalid email address");
+                return false;
+            }
+
+            alert("Registration successful! Thank you.");
+            return true;
+        }
+    </script>
+</body>
+</html>

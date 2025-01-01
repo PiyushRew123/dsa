@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+       ARRAY
+        </title>
+    </head>
+    <body>
+    <h1 id="ree"></h1>
+    <button onclick="pop()">POP</button>
+    <br/>
+    <button onclick="push()">PUSH</button>
+    <br/>
+    <button onclick="slice()">SLICE</button>
+    <br/>
+    <button onclick="reverse()">REVERSE</button>
+    <br/>
+    <button onclick="shift()">SHIFT</button>
+    </body>
+    <script>
+        var z=[];
+        z=['cars','bikes','scooter'];
+      var y=z;
+      document.getElementById("ree").innerText=y;
+      function pop(){
+        y.pop();
+        document.getElementById("ree").innerText=y;
+      }
+      function push(){
+        y.push("truck");
+        document.getElementById("ree").innerText=y;
+      }
+      function slice(){
+        var x=y.slice(2);
+        document.getElementById('ree').innerText=x;
+      }
+      function reverse()
+        {
+            y.reverse();
+            document.getElementById('ree').innerHTML=y;
+        }
+        function shift(){
+            var k=y.shift();
+            document.getElementById('ree').innerHTML=k;
+        }
+    </script>
+</html>

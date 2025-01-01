@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+       Exception Handling
+        </title>
+    </head>
+    <body>
+     <button onclick="test()">Click</button>
+     <h1 id="res"></h1>
+    </body>
+    <script >
+        function test(){
+            try{
+             var number=5;
+             var x=number.toUpperCase()
+            }
+            catch(err){
+                document.getElementById("res").innerHTML=err;
+            }
+        }
+    </script>
+</html>

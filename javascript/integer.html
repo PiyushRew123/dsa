@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+       Integer Table
+        </title>
+    </head>
+    <body>
+    <input name="number" id="number" type="number"/>
+    <button onclick="Table()">display</button>
+    <br/><br/>
+    <p id="res"></p>
+    </body>
+    <script>
+        function Table(){
+        var z=1;
+        var n="";
+        var x=document.getElementById('number').value
+        for (z=1;z<11;z++){
+            var y=x+"X"+z+"="+parseInt(x)*z
+             n=n+y+"<br/>"
+           
+        }
+        document.getElementById('res').innerText=n}
+        </script>
+
+</html>

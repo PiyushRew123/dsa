@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            This
+        </title>
+    </head>
+    <body>
+        <button onclick="this.style.display ='none'">Click me to hide</button>
+
+    </body>
+    <script>
+        var x={
+            firstName:'Bhagirath',
+            SecondName:'Giri',
+            fullName:function (){
+return this.firstName + this.SecondName;
+            }
+        }
+        document.write("<h1>"+x.fullName());
+    </script>
+</html>

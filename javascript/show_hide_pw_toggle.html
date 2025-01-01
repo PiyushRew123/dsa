@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+       pw hide and show
+        </title>
+    </head>
+    <body>
+    <form>
+        User name<br/><input  type="text" name="user"/><br/><br/>
+        Password<br/><input type="password" id="password"/><br/><br/>
+        <button type="button">login</button>
+        <button type="button" onclick="toggle(this)">Show Password</button>
+    </form>
+    </body>
+    <script>
+        var pw=document.getElementById('password');
+        function toggle(elem){
+            var type=pw.getAttribute('type');
+            if(type=='password'){
+            pw.setAttribute('type','text');
+            elem.innerText="Hide Password";}
+            else{
+                pw.setAttribute('type','password');
+            elem.innerText="Show password";
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+       Welcome to my website
+        </title>
+    </head>
+    <body>
+    <form>
+        Name<br/><input placeholder="Enter your name" type="text" id="name" class="form-control is-invalid"/>
+        <div class="invalid-feedback">This is wrong</div>
+        <br/><br/>
+        Email:<br/>
+        <input type="text" placeholder="Enter your email" id="email"/>
+        <br/.<br/>
+        Select car:<br/>
+        <select>
+            <option>BMW</option>
+            <option>Mercedese</option>
+            <option>Rolls Royce</option>
+        </select>
+        <br/><br/>Address<br/>
+       <textarea>Address</textarea><br/><br/>
+       Phone no.<br/><input type="text" id="phone"  />
+    </form>
+    </body>
+    <script>
+        var name=document.getElementById('name');
+        var email=document.getElementById('email');
+        var phone=document.getElementById('phone');
+
+        name.addEventListener('blur',()=>{
+            console.log('name is blurred');
+            let regex=/^[a-zA-Z]([0-9a-zA-Z]){0,10}/
+            let str=name.value;
+            console.log(regex,str);
+            if(regex.test(str)){
+                console.log('it matched');
+            }
+            else{
+                console.log('no match')
+            }
+        })
+        email.addEventListener('blur',()=>{
+            console.log('email is blurred');
+        })
+        phone.addEventListener('blur',()=>{
+            console.log('phone is blurred');
+        })
+    </script>
+</html>

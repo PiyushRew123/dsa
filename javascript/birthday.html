@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+       
+        </title>
+    </head>
+    <body>
+    <h1>Birthday Countdown</h1>
+    <label for="birthday">Enter your birthday</label>
+    <input type="date" id="birthday">
+    <button onclick="birth()">Calculate</button>
+    <p id="res"></p>
+    </body>
+    <script>function birth(){
+        var today= new Date();
+        var birthday_in=document.getElementById('birthday').value
+        var birthday= new Date(birthday_in)
+        birthday.setFullYear(today.getFullYear());
+
+        if (today>birthday)
+        {
+            birthday.setFullYear(today.getFullYear()+1);
+        }
+        var difference=birthday.getTime()-today.getTime();
+
+        var days=Math.ceil(difference/(1000*60*60*24));
+
+        document.getElementById('res').innerHTML="Days remaining to your birthday "+days;
+    }</script>
+</html>

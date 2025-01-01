@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+       Calculator
+        </title>
+    </head>
+    <body>
+        <form>
+        <input type="text" name="first" id="first" step="any"/>
+        <br/>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br/>
+        <input type="text" name="second" id="second" step="any"/>
+        <br/>
+       
+        <br/>
+        <input type="text" name="" id="result" readonly=""/>
+    </form>
+    <button onclick="calculate()">
+        Calculate</button>
+    </body>
+    <script>
+        function calculate(){
+            var oper1=document.getElementById("first").value;
+            console.log(oper1)
+            var oper2=document.getElementById("second").value;
+            var ope=document.getElementById("operator").value;
+            if (ope=="+"){
+                var result= parseInt(oper1) + parseInt(oper2);
+            }
+            if (ope=="-"){
+                var result= parseInt(oper1) - parseInt(oper2);
+            }   
+            if (ope=="*"){
+                var result= parseInt(oper1)*parseInt(oper2);
+            }
+            if (ope=="/"){
+                var result= parseInt(oper1) / parseInt(oper2);
+            }
+        document.getElementById("result").value=result;
+    }
+    </script>
+</html>

@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>
+       Calculator
+        </title>
+        <style>
+            #button1{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 500px;}
+            #button2{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #button3{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #buttona{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #button4{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 500px;}
+            #button5{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #button6{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #buttons{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #button7{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 500px;}
+            #button8{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #button9{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #buttonx{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #buttond{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 500px;}
+            #buttonr{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+            #buttone{height: 40px;width:40px;background-color: black;color:antiquewhite;margin-left: 10px;}
+        </style>
+    </head>
+    <body>
+        <input type="text" id="display" style="margin-left: 500px;width:200px" ><br/><br/>
+    <button id="button1" onclick="displayon()">1</button>
+    <button id="button2" onclick="displayon()">2</button>
+    <button id="button3" onclick="displayon()">3</button>
+    <button id="buttona"  onclick="displayon()">+</button>
+    <br/><br/>
+    <button id="button4" onclick="displayon()">4</button>
+    <button id="button5" onclick="displayon()">5</button>
+    <button id="button6" onclick="displayon()">6</button>
+    <button id="buttons" onclick="displayon()">-</button>
+    <br/><br/>
+    <button id="button7" onclick="displayon()">7</button>
+    <button id="button8" onclick="displayon()">8</button>
+    <button id="button9" onclick="displayon()">9</button>
+
+    <button id="buttonx" onclick="displayon()">*</button>
+    <br/><br/>
+    <button id="buttond" onclick="displayon()">/</button>
+    <button id="buttonr" onclick="displayon()">%</button>
+    <button id="buttone" onclick="res()">=</button>
+</body>
+<script>
+    function displayon(){
+        var button1=1
+        document.getElementById('display').innerText=button1
+
+        var button2=document.getElementById('button2').value
+        document.getElementById('display').innerText=2
+        
+        var button3=document.getElementById('button3').value
+        document.getElementById('display').innerText=3
+        
+        var button4=document.getElementById('button4').value
+        document.getElementById('display').innerText=4
+
+        var button5=document.getElementById('button5').value
+        document.getElementById('display').innerText=button5
+  
+        var button6=document.getElementById('button6').value
+        document.getElementById('display').innerText=button6
+        
+        var button7=document.getElementById('button7').value
+        document.getElementById('display').innerText=button7
+        
+        var button8=document.getElementById('button8').value
+        document.getElementById('display').innerText=button8
+        
+        var button9=document.getElementById('button9').value
+        document.getElementById('display').innerText=button9
+        
+        var buttona=document.getElementById('buttona').value
+        document.getElementById('display').innerText=buttona
+        
+        var buttons=document.getElementById('buttons').value
+        document.getElementById('display').innerText=buttons
+        
+        var buttonx=document.getElementById('buttonx').value
+        document.getElementById('display').innerText=buttonx
+
+        var buttond=document.getElementById('buttond').value
+        document.getElementById('display').innerText=buttond
+
+        var buttonr=document.getElementById('buttonr').value
+        document.getElementById('display').innerText=buttonr
+
+        var buttone=document.getElementById('buttone').value
+        document.getElementById('display').innerText=buttone
+
+  }
+</script>
+</html>

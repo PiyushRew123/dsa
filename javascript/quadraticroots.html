@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+       Quaratic Roots
+        </title>
+    </head>
+    <body>
+    <h2>A Quadratic Equation can be represented by ax<sup>2</sup>+ bx+ c</h2>
+    <input type="text" name="a" id="first" placeholder="Enter value of a"/><br/><br/>
+    <input type="text" name="b" id="second" placeholder="Enter value of b"/><br/><br/>
+    <input type="text" name="c" id="third" placeholder="Enter value of c"/><br/><br/>
+    <button onclick="roots()">Evaluate</button>
+    <h2 id="res"></h2>
+    </body>
+    <script>
+        function roots(){
+        var a=parseFloat(document.getElementById("first").value);
+        
+        var b=parseFloat(document.getElementById("second").value);
+
+        var c=parseFloat(document.getElementById("third").value);
+        var d= b * b -4 *a *c;
+        
+        var root1;
+        var root2;
+        var result
+        if (d>0){
+            root1=(-b + Math.sqrt(d))/(2*a)
+            root2=(-b - Math.sqrt(d))/(2*a)
+
+            result= "Root1 is equal to:"+root1+"<br/>"+
+             "Root2 is equal to:"+root2
+        }
+        else  if(d==0){
+            root1=-b/(2*a)
+            root2=root1
+            result="Both the roots of equation are equal and are:"+root1
+        }
+        else{
+            result="The  roots of equation are imaginary"
+        }
+        document.getElementById('res').innerHTML=result
+    }
+    </script>
+</html>
