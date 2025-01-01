@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+       Vote
+        </title>
+        <script>
+            function age(){
+            var age=document.getElementById('age').value
+                var res="Yes,you can vote"
+                var res1="You can't vote"
+            if (age>=18)
+            {
+                document.getElementById('result').innerHTML=res
+            }
+            else
+            {
+                document.getElementById('result').innerHTML=res1
+            }
+            }</script>
+    </head>
+    <body>
+    Age:<input type="number" id="age" name="age" placeholder="Enter your age"/><br/>
+    <button onclick="age()">Check</button>
+    <div id="result"></div>
+    </body>
+</html>

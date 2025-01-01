@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+       Date
+        </title>
+    </head>
+    <body>
+        <h1 id="ree"></h1>
+    <button onclick="getDate()">Date</button>
+    <br/>
+    <button onclick="year()">Year</button>
+    <br/>
+    <button onclick="month()">month</button>
+    <br/>
+    <button onclick="hours()">Hours</button>
+    <br/>
+    <button onclick="todate()">Today Date</button>
+    <br/>
+    <button onclick="Day()">Day</button>
+    <br/>
+    <button onclick="Minute()">Minutes</button>
+    <br/>
+    <button onclick="time()">Time</button>
+    <br/>
+    <button onclick="seconds()">Seconds</button>
+    </body>
+    <script>
+        var date= new Date();
+        function getDate()
+        {
+            document.getElementById('ree').innerText=date;
+        }
+        function year(){
+            document.getElementById('ree').innerText=date.getFullYear();
+        }
+        function month(){
+            var month=['January','February','March','April','May','June','July'
+        ,'August','September','October','November','December']
+            document.getElementById('ree').innerText=month[date.getMonth()];
+
+        }
+        function hours(){
+            document.getElementById('ree').innerText=date.getHours();
+        }
+        function todate(){
+            document.getElementById('ree').innerText=date.getDate();
+        }
+        function Day(){
+            document.getElementById('ree').innerText=date.getDay();
+        }        function Minute(){
+            document.getElementById('ree').innerText=date.getMinutes();
+        }
+            function time(){
+            document.getElementById('ree').innerText=date.getTime();
+        }
+        function seconds(){
+            document.getElementById('ree').innerText=date.getSeconds();
+        }
+
+
+    </script>
+</html>

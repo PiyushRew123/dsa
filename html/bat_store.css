@@ -1,0 +1,10 @@
+#heading{height:150px}
+#content{height:450px}
+#blanks{width:120px;float:left;height:450px}
+#blank2{width:120px;float:right;height:450px}
+#image{width:340px;background-color:rgb(194, 185, 169);transform:scale(1);transition:transform;float:left;height:450px}
+img:hover{border:wheat 1px solid}
+#verticalblank{height:80px}
+
+
+image:hover{transform :scale(1.3)}

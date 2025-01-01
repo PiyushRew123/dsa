@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Countdown</title>
+    <script>
+        function calculateDaysUntilBirthday() {
+            var birthdayMonth = parseInt(document.getElementById('birthdayMonth').value);
+            var birthdayDay = parseInt(document.getElementById('birthdayDay').value);
+
+            var today = new Date();
+            var currentMonth = today.getMonth() + 1;
+            var currentDay = today.getDate();
+
+            var diffDays;
+            if (currentMonth === birthdayMonth && currentDay <= birthdayDay) {
+                diffDays = birthdayDay - currentDay;
+            } else {
+                var nextBirthday = new Date(today.getFullYear(), birthdayMonth - 1, birthdayDay);
+                if (today > nextBirthday) {
+                    nextBirthday.setFullYear(nextBirthday.getFullYear() + 1);
+                }
+                var timeDifference = nextBirthday.getTime() - today.getTime();
+                diffDays = Math.ceil(timeDifference / (1000 * 3600 * 24));
+            }
+
+            document.getElementById('result').innerHTML = "Days until your birthday: " + diffDays;
+        }
+    </script>
+</head>
+<body>
+    <h2>Birthday Countdown</h2>
+    <label for="birthdayMonth">Enter your birthday month (1-12):</label>
+    <input type="number" id="birthdayMonth" min="1" max="12"><br><br>
+    <label for="birthdayDay">Enter your birthday day (1-31):</label>
+    <input type="number" id="birthdayDay" min="1" max="31"><br><br>
+    <button onclick="calculateDaysUntilBirthday()">Calculate</button><br><br>
+    <div id="result"></div>
+</body> </html>

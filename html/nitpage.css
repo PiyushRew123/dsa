@@ -1,0 +1,8 @@
+#blank{height:150px}
+#content{height:430px;width:450px;border:red 2px solid}
+#image{height:150px;background-color:rgb(151, 163, 164 );float:top}
+img:hover{border:blue 1px solid}
+#auth{height:50px;background-color:rgb(151, 163, 164 );float:top}
+#form{height:230px;float:top;background-color:rgb(67, 93, 88)}
+#pw{height:30px;color:rgb(52, 52, 108);background-color:rgb(67, 93, 88)}
+/*teal,yellow,yellowish white,wheatdark green*/
